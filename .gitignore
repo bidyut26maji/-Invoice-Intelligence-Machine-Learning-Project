@@ -1,0 +1,30 @@
+# Python generated files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter generated checkpoints
+.ipynb_checkpoints/
+
+# Local editor and OS files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Large local training database (models are committed instead)
+data/inventory.db
+
+# Test and tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
