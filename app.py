@@ -70,7 +70,8 @@ render_markup(
     }
 
     header {
-        visibility: hidden;
+        visibility: visible;
+        background: transparent;
     }
 
     .block-container {
@@ -173,6 +174,7 @@ render_markup(
     [data-testid="stSidebar"] {
         background: var(--navy);
         border-right: 1px solid rgba(255,255,255,0.12);
+        min-width: 18rem;
     }
 
     [data-testid="stSidebar"] * {
@@ -184,6 +186,12 @@ render_markup(
     }
 
     [data-testid="stSidebar"] [data-testid="stRadio"] label {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        align-items: flex-start;
+        white-space: normal;
+        overflow-wrap: anywhere;
         border: 1px solid rgba(255,255,255,0.16);
         border-radius: 4px;
         padding: 0.55rem 0.7rem;
@@ -266,6 +274,17 @@ render_markup(
     }
 
     @media (max-width: 640px) {
+        [data-testid="stSidebar"] {
+            min-width: min(88vw, 22rem);
+            max-width: min(88vw, 22rem);
+        }
+
+        [data-testid="stSidebar"] [data-testid="stRadio"] label {
+            min-height: 3rem;
+            padding: 0.7rem 0.75rem;
+            line-height: 1.35;
+        }
+
         .block-container {
             padding: 1.35rem 1rem 2.5rem;
         }
